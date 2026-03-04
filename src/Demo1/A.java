@@ -1,11 +1,11 @@
 package Demo1;
 public class A {
-    static void main() {
-//        int sum=0;
-//        for(int sum=0;i<=5; System.out.println("sum : "+i+"="+(sum+=i++))) ;
-//
-//int i=0;
-//for(i=0;i<10;i++) {}
+    public static void main(String[] args) {
+        int[] a = {1,2,3};
+        int[] b = a.clone();
+        b[0] = 99;
+        System.out.println(a[0]);
+
     }
 }
 

@@ -2,7 +2,7 @@ package ArraysPrograms;
 
 public class MostFrequentNumber {
     public static void main(String[] args) {
-        int[] arr = {2, 10, 30, 40, 20, 11, 42,35,4,4,4,4};
+        int[] arr = {2, 10, 30, 40, 20, 11, 42,35,4,4,4,4,8,8,8,8};
 
         int mostfrque=arr[0];
         int maxcount=1;
