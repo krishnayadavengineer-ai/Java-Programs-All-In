@@ -6,6 +6,8 @@ sealed class Vechile permits Car{
     }
 
 }
+//syntax
+//sealed class Vechile permits Car,Bike
 
 non-sealed class Car extends Vechile{
     void method1(){
