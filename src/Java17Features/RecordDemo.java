@@ -2,7 +2,7 @@ package Java17Features;
 
 public class RecordDemo {
     public static void main(String[] args) {
-        Employee e1=new Employee(101,"hello");
+        Employee e1=new Employee(101,"hello","hyd");
         System.out.println(e1);
     }
 }
