@@ -1,37 +1,37 @@
 package ArraysPrograms;
+import java.util.Arrays;
 
 public class ArrayRotation {
-    public static void main(String[] args) {
-        int[] arr = {10, 20, 30, 40, 50};
-        int k = 4; // Number of positions to rotate
 
-        int[] rotatedArr = rotateLeft(arr, k);
+    // Left Rotation
+    static void leftRotate(int[] arr, int d) {
+        int n = arr.length;
+        d = d % n;
 
-        System.out.println("Array after rotating left by " + k + " positions: ");
-        System.out.print("{ ");
-        for (int num : rotatedArr) {
-            System.out.print(num+" ");
-        }
-        System.out.println("}");
+        reverse(arr, 0, d - 1);
+        reverse(arr, d, n - 1);
+        reverse(arr, 0, n - 1);
     }
 
-    public static int[] rotateLeft(int[] array, int k) {
-        int n = array.length;
-        int[] result = new int[n];
+    // Reverse method
+    static void reverse(int[] arr, int start, int end) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
 
-        // Adjust k if it's greater than array length
-        k = k % n;
-
-        // Copy elements from k to end
-        for (int i = 0; i < n - k; i++) {
-            result[i] = array[i + k];
+            start++;
+            end--;
         }
+    }
 
-        // Copy first k elements to the end
-        for (int i = n - k; i < n; i++) {
-            result[i] = array[i - (n - k)];
-        }
+    public static void main(String[] args) {
 
-        return result;
+        int[] arr = {1, 2, 3, 4, 5};
+        int d = 2;
+
+        leftRotate(arr, d);
+
+        System.out.println(Arrays.toString(arr));
     }
 }
