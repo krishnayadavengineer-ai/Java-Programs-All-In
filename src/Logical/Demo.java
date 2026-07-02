@@ -1,15 +1,16 @@
 package Logical;
 
 public class Demo {
-
-    public static void main(String[] args) {
-        System.out.println("hello main method");
-    }
-    static {
-        System.out.println("hello static block2");
+    Demo(){
+        System.out.println("Hello");
     }
 
-    static {
-        System.out.println("hello static block ");
+    {
+        System.out.println("Hello1");
+
+    }
+
+    static void main(){
+Demo.main();
     }
 }
